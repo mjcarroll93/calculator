@@ -29,6 +29,7 @@ public class Display {
 
 
     public void runCalculator() {
+        showCommandMenu();
         while (calculatorOn) {
             checkCurrentNumberOnDisplay();
             showCurrentNumberOnDisplay();
@@ -127,7 +128,7 @@ public class Display {
                     showCommandMenu();
                     break;
                 default:
-                    System.out.println("Did not enter a Command");
+                    System.out.println("Did not enter a valid command");
                     break;
             }
         }

@@ -61,7 +61,7 @@ public class CalculatorTest {
     }
 
     @Test
-    public void calculateInverseOfNumberOnDisplay() {
+    public void calculateInverseOfNumberOnDisplayTest() {
         double expectedValue = 0.1;
         double actualValue = calculator.calculateInverseOfNumberOnDisplay(10);
         assertEquals("The expected value should be 0.1", expectedValue, actualValue, Math.ulp(1E-9));
@@ -69,7 +69,7 @@ public class CalculatorTest {
     }
 
     @Test
-    public void calculateVariableExponentiation() {
+    public void calculateVariableExponentiationTest() {
         double expectedValue = 32;
         double actualValue = calculator.calculateVariableExponentiation(2, 5);
         assertEquals("The expected value should 32", expectedValue, actualValue, Math.ulp(1E-9));
@@ -135,6 +135,55 @@ public class CalculatorTest {
         double expectedValue = 24;
         double actualValue = calculator.calculateTheFactorialOfValueOnDisplay(4);
         assertEquals("The expected value should be 24", expectedValue, actualValue, Math.ulp(1E-9));
+    }
+
+    @Test
+    public void calculateInverseSineOfValueOnDisplayTest() {
+        double expectedValue = 90;
+        double actualValue = calculator.calculateInverseSineOfValueOnDisplay(1);
+        assertEquals("The expected value should be 90", expectedValue, actualValue, Math.ulp(1E-9));
+    }
+
+    @Test
+    public void calculateTheInverseCosineOfValueOnDisplayTest() {
+        double expectedValue = 60;
+        double actualValue = calculator.calculateTheInverseCosineOfValueOnDisplay(0.5);
+        assertEquals("The expected value should be 0", expectedValue, actualValue, Math.ulp(1));
+    }
+
+    @Test
+    public void calculateTheInverseTangentOfTheValueOnDisplayTest() {
+        double expectedValue = 45;
+        double actualValue = calculator.calculateTheInverseTangentOfTheValueOnDisplay(1);
+        assertEquals("The expected value should be 45", expectedValue, actualValue, Math.ulp(0));
+    }
+
+    @Test
+    public void calculateTheLogOfValueOnDisplayTest() {
+        double expectedValue = 1;
+        double actualValue = calculator.calculateTheLogOfValueOnDisplay(10);
+        assertEquals("The expected value should be 1", expectedValue, actualValue, Math.ulp(0));
+    }
+
+    @Test
+    public void calculateTheInverseLogOfValueOnDisplayTest() {
+        double expectedValue = 100000;
+        double actualValue = calculator.calculateTheInverseLogOfValueOnDisplay(5);
+        assertEquals("The expected value should be 100000", expectedValue, actualValue, Math.ulp(0));
+    }
+
+    @Test
+    public void calculateTheNaturalLogarithmOfValueOnDisplayTest() {
+        double expectedValue = 0;
+        double actualValue = calculator.calculateTheNaturalLogarithmOfValueOnDisplay(1);
+        assertEquals("The expected value should be 0", expectedValue, actualValue, Math.ulp(1E-9));
+    }
+
+    @Test
+    public void calculateInverseNaturalLogarithmOfValueOnDisplayTest() {
+        double expectedValue = 148.41315910257657;
+        double actualValue = calculator.calculateInverseNaturalLogarithmOfValueOnDisplay(5);
+        assertEquals("The expected value should be 148.41315910257657", expectedValue, actualValue, Math.ulp(1E-9));
     }
 
 

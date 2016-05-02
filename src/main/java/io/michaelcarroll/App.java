@@ -6,9 +6,12 @@ public class App {
     public static void main(String[] args) {
 
         Display display = new Display();
-        display.showCommandMenu();
-
-        display.runCalculator();
+        try {
+            display.runCalculator();
+        } catch (Exception e) {
+            System.out.println("Err - Not a command");
+            display.runCalculator();
+        }
 
     }
 }

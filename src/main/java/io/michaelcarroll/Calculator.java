@@ -15,7 +15,7 @@ public class Calculator {
      * and calculate factorial
      */
 
-    private double valueStoredInMemory;
+    private static double valueStoredInMemory;
 
 
     public double addValues(double valueOnDisplay, double valueEntered) {
@@ -63,15 +63,15 @@ public class Calculator {
 
 
     public void storeAValueInMemory(double valueStoredInMemory) {
-        this.valueStoredInMemory = valueStoredInMemory;
+        valueStoredInMemory = valueStoredInMemory;
     }
 
     public double getValueStoredInMemory() {
-        return this.valueStoredInMemory;
+        return valueStoredInMemory;
     }
 
     public void resetValueStoredInMemory() {
-        this.valueStoredInMemory = 0;
+        valueStoredInMemory = 0;
     }
 
     public double calculateTheSineOfValueOnDisplay(double valueOnDisplay) {
@@ -112,7 +112,8 @@ public class Calculator {
     public double calculateTheInverseCosineOfValueOnDisplay(double valueOnDisplay) {
         if (Display.currentUnit == Units.RADIANS) {
             return Math.acos(valueOnDisplay);
-        } else {
+        }
+        else{
             return Math.toDegrees(Math.acos(valueOnDisplay));
         }
     }
